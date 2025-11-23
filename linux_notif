@@ -3,7 +3,7 @@ sleep 10
 # Tentukan URL yang ingin dibuka
 URL="https://www.google.com"
 NOTIF_TITLE="Haii.."
-NOTIF_BODY="Selamat Datang Kembali paok"
+NOTIF_BODY="System Updated ✅"
 TIMEOUT=10000
 
 # Kirim notifikasi dengan aksi default yang dapat diklik.
