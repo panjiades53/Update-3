@@ -1,0 +1,24 @@
+#!/bin/bash
+sleep 10
+# Tentukan URL yang ingin dibuka
+URL="https://www.google.com"
+NOTIF_TITLE="Haii.."
+NOTIF_BODY="Selamat Datang Kembali paok"
+TIMEOUT=10000
+
+# Kirim notifikasi dengan aksi default yang dapat diklik.
+# Aksi "default" akan dipicu saat notifikasi diklik.
+notify-send \
+  --action="default=Buka Google" \
+  --expire-time="$TIMEOUT" \
+  "$NOTIF_TITLE" \
+  "$NOTIF_BODY" | while read -r line; do
+
+    # Periksa apakah aksi yang dikembalikan adalah "default"
+    if [[ "$line" == "default" ]]; then
+        # JIKA diklik, buka URL menggunakan firefox-esr
+        # Tambahkan & di akhir untuk menjalankan browser di latar belakang
+        firefox-esr "$URL" &
+        break
+    fi
+done
