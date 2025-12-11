@@ -1,24 +1,37 @@
 #!/bin/bash
-sleep 10
-# Tentukan URL yang ingin dibuka
-URL="https://www.google.com"
-NOTIF_TITLE="Info Update :"
-NOTIF_BODY="Hari jumat 12 Desember ada update widget"
-TIMEOUT=10000
 
-# Kirim notifikasi dengan aksi default yang dapat diklik.
-# Aksi "default" akan dipicu saat notifikasi diklik.
-notify-send \
-  --action="default=Buka Google" \
-  --expire-time="$TIMEOUT" \
-  "$NOTIF_TITLE" \
-  "$NOTIF_BODY" | while read -r line; do
+# --- 1. Definisikan Variabel ---
+FOLDER="$HOME/.Update1"
+URL="https://wps-pclevel.blogspot.com/2025/12/cara-update-linux-dashboard-v1.html?m=1"
+APP_NAME="System Update"
 
-    # Periksa apakah aksi yang dikembalikan adalah "default"
-    if [[ "$line" == "default" ]]; then
-        # JIKA diklik, buka URL menggunakan firefox-esr
-        # Tambahkan & di akhir untuk menjalankan browser di latar belakang
-        firefox-esr "$URL" &
-        break
-    fi
-done
+# --- 2. Periksa Kondisi (Folder TIDAK ADA) ---
+# Menggunakan operator negasi (!) pada -d (direktori ada)
+if [ ! -d "$FOLDER" ]; then
+    
+    # 3. Kirim Notifikasi
+    # Notifikasi dikirimkan dengan tombol 'Lihat Detail' (action ID: detail_action)
+    /usr/bin/notify-send \
+        --app-name="$APP_NAME" \
+        --icon=dialog-information \
+        --action=detail_action='Klik notif untuk cara update' \
+        --expire-time=30000 \
+        "Update Tersedia" \
+        "TERMUX DASHBOARD V.1"
+        
+    echo "Notifikasi 'Update Tersedia' telah dikirim."
+
+    # Keterbatasan: 
+    # Skrip shell tidak dapat secara pasif menunggu user mengklik notifikasi.
+    # Perintah untuk membuka URL harus dipicu oleh sistem notifikasi itu sendiri
+    # (melalui D-Bus) atau dijalankan segera di sini.
+
+    # 4. Solusi Praktis (Membuka URL SEGERA)
+    # Jika Anda ingin link terbuka segera setelah notifikasi muncul (bukan saat di klik), 
+    # hapus tanda '#' di baris di bawah ini:
+    xdg-open "$URL" & 
+    
+else
+    # Folder ada, tidak ada notifikasi yang ditampilkan
+    echo "System Update ✅"
+fi
