@@ -32,6 +32,8 @@ if [ ! -d "$FOLDER" ]; then
     xdg-open "$URL" & 
     
 else
-    # Folder ada, tidak ada notifikasi yang ditampilkan
-    echo "System Update ✅"
-fi
+
+ notify-send "System Updated ✅"
+
+
+fi  
