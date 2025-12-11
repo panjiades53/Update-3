@@ -2,7 +2,7 @@
 sleep 10
 # Tentukan URL yang ingin dibuka
 URL="https://www.google.com"
-NOTIF_TITLE="Haii.."
+NOTIF_TITLE="Info Update :"
 NOTIF_BODY="Hari jumat 12 Desember ada update widget"
 TIMEOUT=10000
 
