@@ -93,7 +93,6 @@ def check_google_sheet():
                     # Indeks baris di Google Sheet (1-based) adalah (indeks list + 1)
                     row_to_delete = list_index + 1
                     
-                    print(f"🔑 Key ditemukan di baris {row_to_delete}. Menghapus baris...")
                     
                     # ⚠️ Menghapus baris dari Google Sheet
                     sheet.delete_rows(row_to_delete)
