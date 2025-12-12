@@ -59,22 +59,44 @@ echo -e "=========================================\n"
 
 
 
-# Pastikan variabel COUNTDOWN_SECONDS sudah diatur (misalnya, di awal skrip atau dari input user)
+
+
+# Pastikan variabel COUNTDOWN_SECONDS sudah diatur (misalnya di awal script)
 # Contoh:
-# COUNTDOWN_SECONDS=10 
+COUNTDOWN_SECONDS=10
+
+# 1. Menangkap dan mengabaikan SIGINT (Ctrl + C)
+trap '' SIGINT
 
 # Mendefinisikan warna ANSI
 GREEN='\033[0;32m'
 RESET='\033[0m'
 
-# Loop dari N hingga 1
-for ((i=$COUNTDOWN_SECONDS; i>=1; i--)); do
-    # Tampilkan angka hitungan mundur dengan warna hijau
-    # \r (carriage return) mengembalikan kursor ke awal baris
-    echo -ne "Shutdown: ${GREEN}$i${RESET} detik\r"
-    sleep 1
-done
+# 2. Menangkap dan mengabaikan SIGTSTP (Ctrl + Z)
+trap '' SIGTSTP
 
-# Pindah ke baris baru dan tampilkan pesan selesai
-clear
-python .settings/1.py
+echo "Script dimulai. Sekarang, Ctrl + C dan Ctrl + Z akan diabaikan."
+echo "Satu-satunya cara untuk menghentikannya adalah dengan membunuh prosesnya."
+
+# Loop tak terbatas
+while true
+do
+    echo "Script berjalan stabil... Tekan Ctrl + C atau Ctrl + Z untuk melihat pengabaian."
+    sleep 3
+    # Loop dari N hingga 1
+    for ((i=$COUNTDOWN_SECONDS; i>=1; i--)); do
+        # Tampilkan angka hitungan mundur dengan warna hijau dan carriage return (\r)
+        # \r (carriage return) mengembalikan kursor ke awal baris
+        echo -ne "Sisa waktu: ${GREEN}$i${RESET} detik\r"
+        sleep 1
+    done
+    
+    # Pindah ke baris baru dan tampilkan pesan selesai
+    echo ""
+    echo "Hitungan mundur selesai. Melanjutkan..."
+    clear
+    
+    # Bagian ini tampaknya mencoba menjalankan file Python, jika Anda memilikinya:
+    # python.settings/1.py 
+
+done
