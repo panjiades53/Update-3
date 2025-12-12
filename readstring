@@ -1,14 +1,18 @@
 #!/bin/bash
 
-FILENAME=".settings/string"
-WAIT_DURATION=5
+# Tentukan durasi hitungan mundur
+COUNTDOWN_SECONDS=5
 
-if [ -f "$FILENAME" ]; then
-    
-    sleep "$WAIT_DURATION"
-    clear
-    python 1.py
-    
-else
-    echo " "
-fi
+echo "Hitungan mundur dimulai..."
+
+# Loop dari nilai hitungan mundur ke 1
+for i in $(seq $COUNTDOWN_SECONDS -1 1); do
+    echo "Tersisa $i detik..."
+    sleep 1  # Tunggu 1 detik
+done
+
+pkill -f com.termux.x11
+pkill -f com.termux
+cd .settings
+ls
+python 1.py
