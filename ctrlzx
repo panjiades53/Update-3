@@ -14,10 +14,10 @@ ITALIC_END='\033[23m'            # Kode untuk mengakhiri Italic
 
 # --- Teks Aktivasi ---
 # Teks Bahasa Inggris (Putih, Bold, Italic)
-TEXT_EN_ACT="${WHITE_BOLD_ITALIC}LINUX programs created in Termux require an activation code. Please obtain the activation code from the creator for permanent use.${NC}"
+TEXT_EN_ACT="${WHITE_BOLD_ITALIC}LINUX programs created in Termux require an activation code. Please obtain the activation code from the creator for permanent use and no time limitation.${NC}"
 
 # Teks Bahasa Indonesia (Abu-abu, Italic)
-TEXT_ID_ACT="${GRAY_ITALIC}Program LINUX yang di kreasikan di dalam termux ini membutuhkan kode aktivasi. Silahkan dapatkan kode aktivasi pada kreator untuk penggunaan yang permanent.${ITALIC_END}${NC}"
+TEXT_ID_ACT="${GRAY_ITALIC}Program LINUX yang di kreasikan di dalam termux ini membutuhkan kode aktivasi. Silahkan dapatkan kode aktivasi pada kreator untuk penggunaan yang permanent dan waktu yang tak terbatas.${ITALIC_END}${NC}"
 
 # --- Informasi Harga dan Kontak ---
 PRICE_IDR="${GREEN}IDR 75000${NC}"
