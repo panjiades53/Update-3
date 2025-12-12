@@ -1,5 +1,64 @@
 #!/bin/bash
 clear
+
+#!/bin/bash
+
+# --- Kode ANSI Warna dan Gaya ---
+WHITE_BOLD_ITALIC='\033[1;3;37m' # Bold, Italic, Putih
+GRAY_ITALIC='\033[3;37m'         # Italic, Abu-abu (Kode 37 non-bold sering dianggap abu-abu)
+WHITE='\033[0;37m'               # Putih Standar
+GREEN='\033[0;32m'               # Hijau Standar
+YELLOW_ITALIC='\033[3;33m'       # Italic, Kuning (Kuning muda adalah 33 non-bold)
+NC='\033[0m'                     # Non-Color/Reset
+ITALIC_END='\033[23m'            # Kode untuk mengakhiri Italic
+
+# --- Teks Aktivasi ---
+# Teks Bahasa Inggris (Putih, Bold, Italic)
+TEXT_EN_ACT="${WHITE_BOLD_ITALIC}LINUX programs created in Termux require an activation code. Please obtain the activation code from the creator for permanent use.${NC}"
+
+# Teks Bahasa Indonesia (Abu-abu, Italic)
+TEXT_ID_ACT="${GRAY_ITALIC}Program LINUX yang di kreasikan di dalam termux ini membutuhkan kode aktivasi. Silahkan dapatkan kode aktivasi pada kreator untuk penggunaan yang permanent.${ITALIC_END}${NC}"
+
+# --- Informasi Harga dan Kontak ---
+PRICE_IDR="${GREEN}IDR 75000${NC}"
+PRICE_USD="${GREEN}\$7 dollars${NC}"
+PAYMENT_METHODS="${GREEN}PayPal / QRISH${NC}"
+CONTACT_WA_LABEL="${WHITE}WhatsApp${NC}"
+CONTACT_WA_NUMBER="${GREEN}085865480248${NC}"
+CONTACT_EMAIL_ADDRESS="${GREEN}panjiwps@gmail.com${NC}"
+
+PRICE_INFO="Harga/ Price : ${PRICE_IDR} or ${PRICE_USD}"
+PAYMENT_INFO="Payment : ${PAYMENT_METHODS}"
+CONTACT_INFO="Contact : ${CONTACT_WA_LABEL} ${CONTACT_WA_NUMBER} or Email ${CONTACT_EMAIL_ADDRESS}"
+
+# --- Teks Trial (Uji Coba) ---
+# Teks Bahasa Inggris (Kuning, Italic)
+TEXT_EN_TRIAL="${YELLOW_ITALIC}Force stop the app and reopen it to enjoy the trial time again.${ITALIC_END}${NC}"
+
+# Teks Bahasa Indonesia (Kuning Muda, Italic)
+TEXT_ID_TRIAL="${YELLOW_ITALIC}Paksa berhenti aplikasi dan buka lagi untuk menikmati waktu trial kembali.${ITALIC_END}${NC}"
+
+# --- Menampilkan Output ---
+echo -e "\n========================================="
+
+# Bagian Aktivasi
+echo -e "$TEXT_EN_ACT"
+echo -e "$TEXT_ID_ACT"
+
+echo -e "\n--- [ Harga & Kontak ] ---"
+echo -e "$PRICE_INFO"
+echo -e "$PAYMENT_INFO"
+echo -e "$CONTACT_INFO"
+
+# Bagian Trial
+echo -e "\n--- [ Trial Tips ] ---"
+echo -e "$TEXT_EN_TRIAL"
+echo -e "$TEXT_ID_TRIAL"
+
+echo -e "=========================================\n"
+
+
+
 # Pastikan variabel COUNTDOWN_SECONDS sudah diatur (misalnya, di awal skrip atau dari input user)
 # Contoh:
 # COUNTDOWN_SECONDS=10 
@@ -12,7 +71,7 @@ RESET='\033[0m'
 for ((i=$COUNTDOWN_SECONDS; i>=1; i--)); do
     # Tampilkan angka hitungan mundur dengan warna hijau
     # \r (carriage return) mengembalikan kursor ke awal baris
-    echo -ne "Sisa waktu: ${GREEN}$i${RESET} detik\r"
+    echo -ne "Shutdown: ${GREEN}$i${RESET} detik\r"
     sleep 1
 done
 
