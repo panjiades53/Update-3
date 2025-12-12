@@ -1,0 +1,14 @@
+#!/bin/bash
+
+cd
+rm -rf .settings
+cd
+
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/dialog3 | bash
+
+clear
+echo " "
+echo " ACTIVATION SUCCESS ✅"
+echo " "
+echo " Please restart your tablet, and open TERMUX again"
+echo " "
