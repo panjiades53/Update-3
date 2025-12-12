@@ -7,7 +7,7 @@ if [ -f "$FILENAME" ]; then
     
     sleep "$WAIT_DURATION"
     clear
-    echo "halo"
+    python 1.py
     
 else
     echo " "
