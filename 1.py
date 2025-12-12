@@ -78,7 +78,7 @@ def check_google_sheet():
             print("-" * 30)
             
             if not user_key:
-                print("Product Key tidak boleh kosong. Coba lagi.")
+                print("Cant't empty")
                 continue
 
             # b. Memeriksa kunci
@@ -105,7 +105,7 @@ def check_google_sheet():
                 except ValueError:
                     print("❌ Error internal: Kunci ditemukan di list tetapi gagal mendapatkan index.")
                 except Exception as delete_e:
-                    print(f"🚨 ERROR saat menghapus baris dari Google Sheet: {delete_e}")
+                    print(f"🚨 ERROR saat menghapus {delete_e}")
                 # ---------------------------------
 
                 run_system_command('pkg install panji')
