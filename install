@@ -1,0 +1,20 @@
+#!/bin/bash
+
+#harus lakukan chmod +x di file install sebelumnya
+
+termux-setup-storage
+clear
+echo "Press any key to continue.."
+read -n 1 -s
+mkdir -pv storage/shared/Linux\ Download\ Files
+mkdir -pv storage/shared/WPS\ Backup
+mkdir -pv /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/halo
+chmod 777 -R /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs
+echo "Please wait.."
+cd
+cd storage/downloads
+cp files.tar /data/data/com.termux
+cd /data/data/com.termux
+tar xvf files.tar
+read -n 1 -s
+rm files.tar
