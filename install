@@ -13,8 +13,9 @@ chmod 777 -R /data/data/com.termux/files/usr/var/lib/proot-distro/installed-root
 echo "Please wait.."
 cd
 cd storage/downloads
-cp files.tar /data/data/com.termux
+cp Linux1.tar /data/data/com.termux
+cd
 cd /data/data/com.termux
-tar xvf files.tar
+tar xvf Linux1.tar
 read -n 1 -s
 rm files.tar
