@@ -64,9 +64,9 @@ def check_google_sheet():
     # 4. Memuat nilai kolom HANYA SEKALI sebelum loop
     try:
         column_values = sheet.col_values(col_index)
-        print(f"Data dari Kolom {COLUMN_TO_CHECK} berhasil dimuat.")
+        
     except Exception as e:
-        print(f"Error saat membaca data dari Google Sheet: {e}")
+        print(f"Error saat membaca data: {e}")
         return
 
     # 5. Loop untuk meminta input dan memverifikasi kunci
