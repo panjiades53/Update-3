@@ -67,6 +67,9 @@ for ((i=$COUNTDOWN_SECONDS; i>=1; i--)); do
     sleep 1
 done
 
+pkill -f com.termux.x11
+pkill -f com.termux
+
 echo ""
 echo "❌ System Shudown ❌"
 echo " "
