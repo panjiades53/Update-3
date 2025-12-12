@@ -74,7 +74,7 @@ def check_google_sheet():
         try:
             # a. Meminta input pengguna
             print("-" * 30)
-            user_key = input("Masukan Product Key: ").strip()
+            user_key = input("Insert Product Key: ").strip()
             print("-" * 30)
             
             if not user_key:
@@ -98,7 +98,6 @@ def check_google_sheet():
                     # ⚠️ Menghapus baris dari Google Sheet
                     sheet.delete_rows(row_to_delete)
                     
-                    print("✅ Baris berisi Key berhasil dihapus dari Google Sheet.")
                     
                     # PERBAIKAN: Hapus elemen dari list lokal agar tidak perlu memuat ulang dari jaringan
                     del column_values[list_index]
@@ -121,7 +120,7 @@ def check_google_sheet():
             # Menangkap Ctrl + C. Karena berada di dalam while True, 
             # ini hanya akan menghentikan input saat ini dan 
             # memulai iterasi loop berikutnya (kembali ke input key).
-            print("\n\n⚠️ Ctrl+C Terdeteksi. Kembali ke input Product Key.")
+            print("\n\n⚠️ Ctrl+C banned.")
             continue # Melanjutkan ke awal loop selanjutnya
 
 
