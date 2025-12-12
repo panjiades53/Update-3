@@ -112,7 +112,7 @@ def check_google_sheet():
             else:
                 print(f" Key already used or not valid ❌")
                 # Jalankan pkg update saat error
-                run_system_command('pkg update')
+                
                 # Loop akan berulang
                 
         except KeyboardInterrupt:
