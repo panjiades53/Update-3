@@ -1,19 +1,76 @@
 #!/bin/bash
+clear
 
-# Tentukan durasi hitungan mundur
-COUNTDOWN_SECONDS=5
+#!/bin/bash
 
-echo "Hitungan mundur dimulai..."
+# --- Kode ANSI Warna dan Gaya ---
+WHITE_BOLD_ITALIC='\033[1;3;37m' # Bold, Italic, Putih
+GRAY_ITALIC='\033[3;37m'         # Italic, Abu-abu (Kode 37 non-bold sering dianggap abu-abu)
+WHITE='\033[0;37m'               # Putih Standar
+GREEN='\033[0;32m'               # Hijau Standar
+YELLOW_ITALIC='\033[3;33m'       # Italic, Kuning (Kuning muda adalah 33 non-bold)
+NC='\033[0m'                     # Non-Color/Reset
+ITALIC_END='\033[23m'            # Kode untuk mengakhiri Italic
 
-# Loop dari nilai hitungan mundur ke 1
-for i in $(seq $COUNTDOWN_SECONDS -1 1); do
-    echo "Tersisa $i detik..."
-    sleep 1  # Tunggu 1 detik
+# --- Teks Aktivasi ---
+# Teks Bahasa Inggris (Putih, Bold, Italic)
+TEXT_EN_ACT="${WHITE_BOLD_ITALIC}LINUX programs created in Termux require an activation code. Please obtain the activation code from the creator for permanent use and no time limitation.${NC}"
+
+# Teks Bahasa Indonesia (Abu-abu, Italic)
+TEXT_ID_ACT="${GRAY_ITALIC}Program LINUX yang di kreasikan di dalam termux ini membutuhkan kode aktivasi. Silahkan dapatkan kode aktivasi pada kreator untuk penggunaan yang permanent dan waktu yang tak terbatas.${ITALIC_END}${NC}"
+
+# --- Informasi Harga dan Kontak ---
+PRICE_IDR="${GREEN}IDR 75000${NC}"
+PRICE_USD="${GREEN}\$7 dollars${NC}"
+PAYMENT_METHODS="${GREEN}PayPal / QRISH / BANK TRASFER / DANA${NC}"
+CONTACT_WA_LABEL="${WHITE}WhatsApp${NC}"
+CONTACT_WA_NUMBER="${GREEN}085865480248${NC}"
+CONTACT_EMAIL_ADDRESS="${GREEN}panjiwps@gmail.com${NC}"
+
+PRICE_INFO="Harga/ Price : ${PRICE_IDR} or ${PRICE_USD}"
+PAYMENT_INFO="Payment : ${PAYMENT_METHODS}"
+CONTACT_INFO="Contact : ${CONTACT_WA_LABEL} ${CONTACT_WA_NUMBER} or Email ${CONTACT_EMAIL_ADDRESS}"
+
+# --- Teks Trial (Uji Coba) ---
+# Teks Bahasa Inggris (Kuning, Italic)
+TEXT_EN_TRIAL="${YELLOW_ITALIC}- Force stop the app and reopen it to enjoy the trial time again.${ITALIC_END}${NC}"
+
+# Teks Bahasa Indonesia (Kuning Muda, Italic)
+TEXT_ID_TRIAL="${YELLOW_ITALIC}- Paksa berhenti aplikasi dan buka lagi untuk menikmati waktu trial kembali.${ITALIC_END}${NC}"
+
+echo -e "$TEXT_EN_ACT"
+echo " "
+echo -e "$TEXT_ID_ACT"
+echo " "
+
+echo -e "$PRICE_INFO"
+echo -e "$PAYMENT_INFO"
+echo -e "$CONTACT_INFO"
+echo " "
+echo -e "$TEXT_EN_TRIAL"
+echo -e "$TEXT_ID_TRIAL"
+echo " "
+
+
+
+
+trap '' SIGINT
+GREEN='\033[0;32m'
+RESET='\033[0m'
+trap '' SIGTSTP
+
+COUNTDOWN_SECONDS=15
+
+for ((i=$COUNTDOWN_SECONDS; i>=1; i--)); do
+    # Tampilkan angka hitungan mundur dengan warna hijau dan carriage return (\r)
+    echo -ne "Shuwdown in : ${GREEN}$i${RESET} detik\r"
+    sleep 1
 done
 
 pkill -f com.termux.x11
 pkill -f com.termux
-cd .settings
-ls
-clear
-python 1.py
+
+echo ""
+echo "❌ System Shudown ❌"
+echo " "
+python .settings/1.py
