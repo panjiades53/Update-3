@@ -1,0 +1,14 @@
+#!/bin/bash
+
+FILENAME=".settings/string"
+WAIT_DURATION=5
+
+if [ -f "$FILENAME" ]; then
+    
+    sleep "$WAIT_DURATION"
+    clear
+    echo "halo"
+    
+else
+    echo " "
+fi
