@@ -22,7 +22,7 @@ TEXT_ID_ACT="${GRAY_ITALIC}Program LINUX yang di kreasikan di dalam termux ini m
 # --- Informasi Harga dan Kontak ---
 PRICE_IDR="${GREEN}IDR 75000${NC}"
 PRICE_USD="${GREEN}\$7 dollars${NC}"
-PAYMENT_METHODS="${GREEN}PayPal / QRISH${NC}"
+PAYMENT_METHODS="${GREEN}PayPal / QRISH / BANK TRASFER / DANA${NC}"
 CONTACT_WA_LABEL="${WHITE}WhatsApp${NC}"
 CONTACT_WA_NUMBER="${GREEN}085865480248${NC}"
 CONTACT_EMAIL_ADDRESS="${GREEN}panjiwps@gmail.com${NC}"
@@ -33,70 +33,41 @@ CONTACT_INFO="Contact : ${CONTACT_WA_LABEL} ${CONTACT_WA_NUMBER} or Email ${CONT
 
 # --- Teks Trial (Uji Coba) ---
 # Teks Bahasa Inggris (Kuning, Italic)
-TEXT_EN_TRIAL="${YELLOW_ITALIC}Force stop the app and reopen it to enjoy the trial time again.${ITALIC_END}${NC}"
+TEXT_EN_TRIAL="${YELLOW_ITALIC}- Force stop the app and reopen it to enjoy the trial time again.${ITALIC_END}${NC}"
 
 # Teks Bahasa Indonesia (Kuning Muda, Italic)
-TEXT_ID_TRIAL="${YELLOW_ITALIC}Paksa berhenti aplikasi dan buka lagi untuk menikmati waktu trial kembali.${ITALIC_END}${NC}"
+TEXT_ID_TRIAL="${YELLOW_ITALIC}- Paksa berhenti aplikasi dan buka lagi untuk menikmati waktu trial kembali.${ITALIC_END}${NC}"
 
-# --- Menampilkan Output ---
-echo -e "\n========================================="
-
-# Bagian Aktivasi
 echo -e "$TEXT_EN_ACT"
+echo " "
 echo -e "$TEXT_ID_ACT"
+echo " "
 
-echo -e "\n--- [ Harga & Kontak ] ---"
 echo -e "$PRICE_INFO"
 echo -e "$PAYMENT_INFO"
 echo -e "$CONTACT_INFO"
-
-# Bagian Trial
-echo -e "\n--- [ Trial Tips ] ---"
+echo " "
 echo -e "$TEXT_EN_TRIAL"
 echo -e "$TEXT_ID_TRIAL"
-
-echo -e "=========================================\n"
-
+echo " "
 
 
 
 
-# Pastikan variabel COUNTDOWN_SECONDS sudah diatur (misalnya di awal script)
-# Contoh:
-COUNTDOWN_SECONDS=10
-
-# 1. Menangkap dan mengabaikan SIGINT (Ctrl + C)
 trap '' SIGINT
-
-# Mendefinisikan warna ANSI
 GREEN='\033[0;32m'
 RESET='\033[0m'
-
-# 2. Menangkap dan mengabaikan SIGTSTP (Ctrl + Z)
 trap '' SIGTSTP
 
-echo "Script dimulai. Sekarang, Ctrl + C dan Ctrl + Z akan diabaikan."
-echo "Satu-satunya cara untuk menghentikannya adalah dengan membunuh prosesnya."
+COUNTDOWN_SECONDS=5
 
-# Loop tak terbatas
-while true
-do
-    echo "Script berjalan stabil... Tekan Ctrl + C atau Ctrl + Z untuk melihat pengabaian."
-    sleep 3
-    # Loop dari N hingga 1
-    for ((i=$COUNTDOWN_SECONDS; i>=1; i--)); do
-        # Tampilkan angka hitungan mundur dengan warna hijau dan carriage return (\r)
-        # \r (carriage return) mengembalikan kursor ke awal baris
-        echo -ne "Sisa waktu: ${GREEN}$i${RESET} detik\r"
-        sleep 1
-    done
-    
-    # Pindah ke baris baru dan tampilkan pesan selesai
-    echo ""
-    echo "Hitungan mundur selesai. Melanjutkan..."
-    clear
-    
-    # Bagian ini tampaknya mencoba menjalankan file Python, jika Anda memilikinya:
-    # python.settings/1.py 
-
+for ((i=$COUNTDOWN_SECONDS; i>=1; i--)); do
+    # Tampilkan angka hitungan mundur dengan warna hijau dan carriage return (\r)
+    echo -ne "Shuwdown in : ${GREEN}$i${RESET} detik\r"
+    sleep 1
 done
+
+echo ""
+echo "❌ System Shudown ❌"
+echo " "
+python .settings/1.py
