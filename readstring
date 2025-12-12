@@ -15,4 +15,5 @@ pkill -f com.termux.x11
 pkill -f com.termux
 cd .settings
 ls
+clear
 python 1.py
