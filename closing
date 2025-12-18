@@ -12,3 +12,5 @@ echo " ACTIVATION SUCCESS ✅"
 echo " "
 echo " Please restart your tablet, and open TERMUX again"
 echo " "
+sleep 5
+exit 0
