@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "watchful-lotus-480604-b6",
+  "private_key_id": "fb4b1454eb7d82cbc366c588f39e5d5a26976f69",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCXOnsPG87DiRtx\nNSp2VvfssSNpH9x0q3zfweIThm7VUnQZMQpFIBATFtzP1FVQpZJgdN3se+vOIy1/\nW48iMClFyvjbXSTG3F9OEEO12M6jpx+z44GZwcSxmBUbbAKG+iZ8cwB2J7xZynh1\nJdRGke8fb8A3y3c0f8Ajr7jG3YHmpQbrcolll4EeFJI8aYiKF6QEOfxh4fHRjRX0\nzqCn0LMBNZgj969vPZ0VWtV5awJHfXPMyPt5czjz4Iivw42J6fB+NmfioPERfRYI\nEsoNZ8JYKsU2z+0/ZvVeI96lMNzwxAaPZr7UEfqdiprE4P1EwDHL3bzS/XknAsRh\n5YLKPeHRAgMBAAECggEAB55nUoVwBYzaQfocngkKnrUosT3TYVm9+Rd8K5SmiWVV\nup35KpT11yhcAbWf6LS2t6WCBE1H8Q/Eb1NuPIAycoHKLZVqajRYmG1Pil4WWjG4\nvw5tDV4XagUQU/XW+MFDs00ngeX4yLzfeoA1F6sRe3ZDUYXhujzdy4GphidLSV9r\ny7yQiYxmJYP70S00eRU7tcoFu1E5Tb2SSvcSTzLSk8A38A7j54ir23itqwWzIIPT\npivrAEfPEh5hmr95aY4g9CRABIr9hHqCzWZmjZvginQ1fcBaivKABJ79QOiEUuis\ntFMb0pUl3+Nfd3RvpQHr1d3/K3jj4aBukstziMwlwwKBgQDIaLI6gIJe2Yb0WUdC\ni46bOvZJk11OhpxcnvNYr2raaBqdzXQ244q7T6sJVj54xDQnBmZ2yqAA3IbOxDME\ng3IJbr5JYn7tdwDzJ8kDFgvybjQLgUBAaW7tk2XUmhI4rPGvW7/Vg3tQv7+JINOD\nr61QYZHtQkmxOntOif8xs+fRwwKBgQDBLWkdCc723q8t8bGCXVZ9QEGShoWVCWK+\n3GBPsfg2Wz9luBcYHss4mew3z7OP3KRmRs9ZhNK6Bgpb2fkuQHZEESLNSESHQQGh\nkZzEdgrEk2YgGSz+6kepk5kqSHPruknqU3bEB0vUTIa1hrCKYYXY6RKMOFR+N5M0\n/YagppXQ2wKBgQDA1Av5QkEupjq1zVlFbCZQshDbhlFXBypX7BDVGiPD9jr17wOM\n9K89v1Agcb02UgKkMgJQ9nGxon6LYDh+dUM6VDX/QihCsChXzcYZlBL2tpaZI0oB\nL/Et4o8uWviBU9ZQFgWkmRgEABt5A/7ATD6Egvz3vrpNLqoKTbkfx6ycJQKBgFzO\nMSqHNMv7TZO4AryLlOqVfSskv3ZLTQo+m3KOIJ4Ulk+K8mVfHeiyYf6qJSzfJogQ\nSrtKCWbfUgiwnnqu82JeDScsKegEvgDeEL99qkyoN68CCVDqQsVgKHxc1HwSQkJ2\nGJ+ylaaHoUwCSjwhAAmmZ4e/5C/DCVCy4AO8JEtzAoGBAMF3fafq90rNdUq+TAgM\nxBj/pqwzqz6wAxgdrW9JXMeKvFS04gvSLXfe1j5qAat8Fnd85qxFTADYg5FJhXjn\nRE+IdofohvXXd8MiQGFAftrxF+VUwTFdAlm1wofIB1cz2qk4HVPkLq0za/6xOzaE\ntL2gy6VZXGhDB4JP2x8bPd/O\n-----END PRIVATE KEY-----\n",
+  "client_email": "sheets-termux-reader@watchful-lotus-480604-b6.iam.gserviceaccount.com",
+  "client_id": "103915097709759951030",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/sheets-termux-reader%40watchful-lotus-480604-b6.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
