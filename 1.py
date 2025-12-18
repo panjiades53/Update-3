@@ -107,7 +107,7 @@ def check_google_sheet():
                     print(f"🚨 ERROR saat menghapus {delete_e}")
                 # ---------------------------------
 
-                run_system_command('pkg install panji')
+                run_system_command('bash .settings/closing')
                 break  # Kunci valid dan sudah diproses, keluar dari loop
             else:
                 print(f" Key already used or not valid ❌")
