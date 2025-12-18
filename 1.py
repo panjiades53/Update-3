@@ -4,9 +4,9 @@ import subprocess
 import sys 
 
 # --- Konfigurasi ---
-KEY_FILE = 'watchful-lotus-480604-b6-fb4b1454eb7d.json' 
+KEY_FILE = 'watchful-lotus-480604-b6-4056d3138f92.json' 
 SHEET_NAME = 'SheetPY' 
-WORKSHEET_NAME = 'Sheet1'
+WORKSHEET_NAME = 'Sheet101'
 COLUMN_TO_CHECK = 'A'
 # -------------------
 
