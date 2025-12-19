@@ -1,11 +1,13 @@
 #!/bin/bash
 
 #harus lakukan chmod +x di file install sebelumnya
-
+cd
 termux-setup-storage
 clear
 echo "Press any key to continue.."
 read -n 1 -s
+cd
+cd
 mkdir -pv storage/shared/Linux\ Download\ Files
 mkdir -pv storage/shared/WPS\ Backup
 mkdir -pv /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/halo
