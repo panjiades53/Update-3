@@ -7,7 +7,7 @@ if ping -c 1 google.com > /dev/null 2>&1; then
 echo "Koneksi Aktif! Silakan lanjut."
 else
 clear
-    echo "❌ ERROR, Enable internet access to complete instalation and re-open termix again"
+    echo "❌ ERROR, Enable internet access to complete instalation and re-open termux again"
 echo " "
 echo "press any key to exit"
     read -n 1 -s
