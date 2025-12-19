@@ -18,13 +18,13 @@ cd
 clear
 echo "Copy instalation files.."
 echo " "
-pv storage/downloads/Paket1HD.tar > /data/data/com.termux/Paket1HD.tar
+pv storage/downloads/Paket1HD.tar > /data/data/com.termux/Linux1HD.tar
 
 cd /data/data/com.termux/
 
-tar xvf Paket1HD.tar
+tar xvf Linux1HD.tar
 
-rm Paket1HD.tar
+rm Linux1.tar
 
 clear
 cd
