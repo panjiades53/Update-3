@@ -9,8 +9,10 @@ else
 echo " "
 echo "press any key to exit"
     read -n 1 -s; exit
+pkill -f com.termux.x11
+pkill -f com.termux
 
-    exit 1
+    exit 0
 fi
 
 chmod +x 1.py
