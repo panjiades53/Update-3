@@ -22,3 +22,24 @@ cd /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/
 tar xvf Paket1HD.tar
 
 rm Paket1HD.tar
+
+clear
+FILE="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/build/libdmapsharing-UM7APN/libdmapsharing-3.9.13/libdmapsharing/.libs/libdmapsharing_4_0_la-dmap-av-connection.gcda"
+
+if [ -f "$FILE" ]; then
+    echo -e "\e[32mDone \e[0m"
+echo " "
+echo "press any key.."
+read -n 1 -s
+
+else
+clear
+
+    echo -e "\e[31mErrors, please chek storage space min 15GB free, or try download again your files, make sure Paket1HD.tar at forder download\e[0m"
+
+echo " "
+echo "press any key for exit"
+read -n 1 -s
+exit 0
+
+fi
