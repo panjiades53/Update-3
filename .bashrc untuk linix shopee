@@ -39,6 +39,6 @@ echo "ALL DONE ✅"
 echo " "
 echo "press any key to exit, and open termux again"
 read -n 1 -s
-pkill -f com.termux.x11
+exit 1
 pkill -f com.termux
-exit 0
+
