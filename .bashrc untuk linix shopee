@@ -20,3 +20,5 @@ fi
 chmod +x 1.py
 clear
 python 1.py
+clear 
+echo "sukses"
