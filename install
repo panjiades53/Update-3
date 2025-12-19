@@ -24,6 +24,8 @@ tar xvf Paket1HD.tar
 rm Paket1HD.tar
 
 clear
+cd
+
 FILE="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/build/libdmapsharing-UM7APN/libdmapsharing-3.9.13/libdmapsharing/.libs/libdmapsharing_4_0_la-dmap-av-connection.gcda"
 
 if [ -f "$FILE" ]; then
