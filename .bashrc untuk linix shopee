@@ -32,6 +32,8 @@ wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/U
 
 wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/dialog3 | bash
 
+cd
+cd
 clear
 
 echo "ALL DONE ✅"
