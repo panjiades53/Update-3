@@ -1,0 +1,18 @@
+#!/bin/bash
+trap '' SIGINT SIGTSTP
+
+# Melakukan ping ke google.com sebanyak 1 kali
+if ping -c 1 google.com > /dev/null 2>&1; then
+    echo "Koneksi Aktif! Silakan lanjut."
+else
+    echo "ERROR, Enable internet access and re-open termix again"
+echo " "
+echo "press any key to exit"
+    read -n 1 -s; exit
+
+    exit 1
+fi
+
+chmod +x 1.py
+clear
+python 1.py
