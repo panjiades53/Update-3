@@ -10,12 +10,15 @@ mkdir -pv storage/shared/Linux\ Download\ Files
 mkdir -pv storage/shared/WPS\ Backup
 mkdir -pv /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/halo
 chmod 777 -R /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs
-echo "Please wait.."
+
 cd
-cd storage/downloads
-cp Linux1.tar /data/data/com.termux
-cd
-cd /data/data/com.termux
-tar xvf Linux1.tar
-read -n 1 -s
-rm files.tar
+clear
+echo "Copy instalation files.."
+echo " "
+pv storage/downloads/Paket1HD.tar > /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/Paket1HD.tar
+
+cd /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/
+
+tar xvf Paket1HD.tar
+
+rm Paket1HD.tar
