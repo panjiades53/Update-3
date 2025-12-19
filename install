@@ -8,6 +8,7 @@ echo "Press any key to continue.."
 read -n 1 -s
 cd
 cd
+mkdir.settings
 mkdir -pv storage/shared/Linux\ Download\ Files
 mkdir -pv storage/shared/WPS\ Backup
 mkdir -pv /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/halo
