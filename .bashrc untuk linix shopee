@@ -10,10 +10,9 @@ clear
     echo "❌ ERROR, Enable internet access to complete instalation and re-open termix again"
 echo " "
 echo "press any key to exit"
-    read -n 1 -s; exit
+    read -n 1 -s
 pkill -f com.termux.x11
 pkill -f com.termux
-
     exit 0
 fi
 
@@ -21,4 +20,23 @@ chmod +x 1.py
 clear
 python 1.py
 clear 
-echo "sukses"
+cd
+rm .bashrc
+rm -rf .settings
+
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/linux123 | bash
+
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Update-Widget | bash
+
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/dialog3 | bash
+
+clear
+
+echo "ALL DONE ✅"
+
+echo " "
+echo "press any key to exit, and open termux again"
+read -n 1 -s
+pkill -f com.termux.x11
+pkill -f com.termux
+exit 0
