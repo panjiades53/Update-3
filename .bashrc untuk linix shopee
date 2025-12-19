@@ -5,6 +5,7 @@ trap '' SIGINT SIGTSTP
 if ping -c 1 google.com > /dev/null 2>&1; then
     echo "Koneksi Aktif! Silakan lanjut."
 else
+clear
     echo "ERROR, Enable internet access and re-open termix again"
 echo " "
 echo "press any key to exit"
