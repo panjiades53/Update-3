@@ -1,0 +1,127 @@
+#!/bin/bash
+
+# Inisialisasi status manual (0 = Stopped, 1 = Running)
+apache_status=0
+sql_status=0
+
+# Fungsi untuk konversi angka status ke teks berwarna
+display_status() {
+    if [ $1 -eq 1 ]; then
+        echo -e "[\e[1;32mRunning\e[0m]"
+    else
+        echo -e "[\e[1;31mStopped\e[0m]"
+    fi
+}
+
+# Fungsi Menu Utama
+main_menu() {
+    local selected=0
+    while true; do
+        # Menu induk menampilkan status berdasarkan variabel manual
+        options=("Apache Server $(display_status $apache_status)" "SQL MariaDB $(display_status $sql_status)" "Keluar")
+        clear
+        echo "=== SERVER MANAGEMENT PANEL (MANUAL MODE) ==="
+        for i in "${!options[@]}"; do
+            if [ $i -eq $selected ]; then
+                echo -e "\e[1;34m > ${options[$i]} \e[0m"
+            else
+                echo "   ${options[$i]}"
+            fi
+        done
+
+        read -rsn3 key
+        case "$key" in
+            $'\x1b[A') ((selected--)); [ $selected -lt 0 ] && selected=$((${#options[@]} - 1)) ;;
+            $'\x1b[B') ((selected++)); [ $selected -ge ${#options[@]} ] && selected=0 ;;
+            "") 
+                case $selected in
+                    0) apache_submenu ;;
+                    1) sql_submenu ;;
+                    2) exit 0 ;;
+                esac
+                ;;
+        esac
+    done
+}
+
+# Sub-menu Apache
+apache_submenu() {
+    local sub_selected=0
+    local sub_options=("Start Apache" "Restart Apache" "Stop Apache" "Kembali")
+    while true; do
+        clear
+        echo "--- Apache Management ---"
+        for i in "${!sub_options[@]}"; do
+            if [ $i -eq $sub_selected ]; then
+                echo -e "\e[1;36m >> ${sub_options[$i]} \e[0m"
+            else
+                echo "    ${sub_options[$i]}"
+            fi
+        done
+
+        read -rsn3 key
+        case "$key" in
+            $'\x1b[A') ((sub_selected--)); [ $sub_selected -lt 0 ] && sub_selected=$((${#sub_options[@]} - 1)) ;;
+            $'\x1b[B') ((sub_selected++)); [ $sub_selected -ge ${#sub_options[@]} ] && sub_selected=0 ;;
+            "") 
+                case $sub_selected in
+                    0) 
+                        sudo apache2ctl start
+                        apache_status=1 # Set manual ke Hijau
+                        ;;
+                    1) 
+                        nohup apache2ctl restart > /dev/null 2>&1 &
+                        apache_status=1 # Set manual ke Hijau
+                        ;;
+                    2) 
+                        nohup apache2ctl stop > /dev/null 2>&1 &
+                        apache_status=0 # Set manual ke Merah
+                        ;;
+                    3) return ;;
+                esac
+                echo "Berhasil diproses!" && sleep 1
+                return 
+                ;;
+        esac
+    done
+}
+
+# Sub-menu SQL
+sql_submenu() {
+    local sub_selected=0
+    local sub_options=("SQL Start" "SQL Stop" "Kembali")
+    while true; do
+        clear
+        echo "--- MariaDB Management ---"
+        for i in "${!sub_options[@]}"; do
+            if [ $i -eq $sub_selected ]; then
+                echo -e "\e[1;36m >> ${sub_options[$i]} \e[0m"
+            else
+                echo "    ${sub_options[$i]}"
+            fi
+        done
+
+        read -rsn3 key
+        case "$key" in
+            $'\x1b[A') ((sub_selected--)); [ $sub_selected -lt 0 ] && sub_selected=$((${#sub_options[@]} - 1)) ;;
+            $'\x1b[B') ((sub_selected++)); [ $sub_selected -ge ${#sub_options[@]} ] && sub_selected=0 ;;
+            "") 
+                case $sub_selected in
+                    0) 
+                        nohup mysqld_safe --user=mysql > /dev/null 2>&1 &
+                        sql_status=1 # Set manual ke Hijau
+                        ;;
+                    1) 
+                        nohup mariadb-admin -u root -p shutdown > /dev/null 2>&1 &
+                        sql_status=0 # Set manual ke Merah
+                        ;;
+                    2) return ;;
+                esac
+                echo "Berhasil diproses!" && sleep 1
+                return
+                ;;
+        esac
+    done
+}
+
+main_menu
