@@ -35,8 +35,4 @@ else
 
  notify-send "System Updated ✅"
 
-sleep 8
-
-notify-send "Jika WPS Error saat dibuka" "Masuk buku update di termux, dan reinstall WPS 2019, akan normal kembali, Abaikan notif ini jika wps normal"
-
 fi  
