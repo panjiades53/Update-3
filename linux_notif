@@ -37,6 +37,6 @@ else
 
 sleep 5
 
-notify-send "WPS Error" "Jika WPS error, go to buku update, dan reinstall WPS 2019, akan normal kembali" -u critical -t 0
+notify-send "WPS Error" "Jika WPS error, masuk buku update di termux, dan reinstall WPS 2019, akan normal kembali" -u critical -t 0
 
 fi  
