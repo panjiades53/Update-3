@@ -70,11 +70,11 @@ apache_submenu() {
                         apache_status=1 # Set manual ke Hijau
                         ;;
                     1) 
-                        nohup apache2ctl restart > /dev/null 2>&1 &
+                        nohup apache2ctl restart &
                         apache_status=1 # Set manual ke Hijau
                         ;;
                     2) 
-                        nohup apache2ctl stop > /dev/null 2>&1 &
+                        nohup apache2ctl stop &
                         apache_status=0 # Set manual ke Merah
                         ;;
                     3) return ;;
@@ -108,11 +108,11 @@ sql_submenu() {
             "") 
                 case $sub_selected in
                     0) 
-                        nohup mysqld_safe --user=mysql > /dev/null 2>&1 &
+                        nohup mysqld_safe --user=mysql > &
                         sql_status=1 # Set manual ke Hijau
                         ;;
                     1) 
-                        nohup mariadb-admin -u root -p shutdown > /dev/null 2>&1 &
+                        nohup mariadb-admin -u root -p shutdown &
                         sql_status=0 # Set manual ke Merah
                         ;;
                     2) return ;;
