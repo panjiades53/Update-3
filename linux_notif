@@ -33,6 +33,6 @@ if [ ! -d "$FOLDER" ]; then
     
 else
 
- notify-send "Besok akan ada update untuk wps eror saat dibuka.."
+ notify-send "🔔 Info : Besok akan ada update untuk wps eror saat dibuka.."
 
 fi  
