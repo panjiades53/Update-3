@@ -9,7 +9,7 @@ notify-send -t 12000 "⚠️ CARA UPDATE LINUX ( Code Zyrex )" "1. Buka termux b
 sleep 12
 
 # Notif ketiga - 3 detik
-notify-send -t 5000 "Info Sistem" "Linux ini ( Code : Zotero )tidak dapat pembaharuan lagi ke depan."
+notify-send -t 5000 "Info Sistem" "Linux ini ( Code : Zotero ) tidak dapat pembaharuan lagi ke depan."
 
 sleep 5
 
