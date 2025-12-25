@@ -4,9 +4,9 @@ notify-send -t 7000 "🔔 Sistem Update tersedia" "( Code Zyrex ) dengan perbaik
 sleep 8
 
 # Notif kedua - 10 detik
-notify-send -t 10000 "⚠️ CARA UPDATE LINUX ( Code Zyrex )" "1. Buka termux biasa\n2. Pilih 2 Buku Update\n3. Pilih install Ulang paket ( code zyrex )\n4. Download bahan sesuai paket awal\n5. Buka termux lagi bagian install ulang code zyrex\n6. Install ✅"
+notify-send -t 15000 "⚠️ CARA UPDATE LINUX ( Code Zyrex )" "1. Buka termux biasa\n2. Pilih 2 Buku Update\n3. Pilih install Ulang paket ( code zyrex )\n4. Download bahan sesuai paket awal\n5. Buka termux lagi bagian install ulang code zyrex\n6. Install ✅"
 
-sleep 10
+sleep 15
 
 # Notif ketiga - 3 detik
 notify-send -t 5000 "Info Sistem" "Linux ini ( Code : Zotero )tidak dapat pembaharuan lagi ke depan."
