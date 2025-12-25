@@ -1,38 +1,23 @@
-#!/bin/bash
+# Notif pertama - 5 detik
+notify-send -t 7000 "🔔 Sistem Update tersedia" "( Code Zyrex ) dengan perbaikan WPS an error eccurred saat di buka. Dan remove zotero."
 
-# --- 1. Definisikan Variabel ---
-FOLDER="$HOME/.Update1"
-URL="https://wps-pclevel.blogspot.com/2025/12/cara-update-linux-dashboard-v1.html?m=1"
-APP_NAME="System Update"
+sleep 8
 
-# --- 2. Periksa Kondisi (Folder TIDAK ADA) ---
-# Menggunakan operator negasi (!) pada -d (direktori ada)
-if [ ! -d "$FOLDER" ]; then
-    
-    # 3. Kirim Notifikasi
-    # Notifikasi dikirimkan dengan tombol 'Lihat Detail' (action ID: detail_action)
-    /usr/bin/notify-send \
-        --app-name="$APP_NAME" \
-        --icon=dialog-information \
-        --action=detail_action='Klik notif untuk cara update' \
-        --expire-time=30000 \
-        "Update Tersedia" \
-        "TERMUX DASHBOARD V.1"
-        
-    echo "Notifikasi 'Update Tersedia' telah dikirim."
+# Notif kedua - 10 detik
+notify-send -t 10000 "⚠️ CARA UPDATE LINUX ( Code Zyrex )" "1. Buka termux biasa\n2. Pilih 2 Buku Update\n3. Pilih install Ulang paket ( code zyrex )\n4. Download bahan sesuai paket awal\n5. Buka termux lagi bagian install ulang code zyrex\n6. Install ✅"
 
-    # Keterbatasan: 
-    # Skrip shell tidak dapat secara pasif menunggu user mengklik notifikasi.
-    # Perintah untuk membuka URL harus dipicu oleh sistem notifikasi itu sendiri
-    # (melalui D-Bus) atau dijalankan segera di sini.
+sleep 10
 
-    # 4. Solusi Praktis (Membuka URL SEGERA)
-    # Jika Anda ingin link terbuka segera setelah notifikasi muncul (bukan saat di klik), 
-    # hapus tanda '#' di baris di bawah ini:
-    xdg-open "$URL" & 
-    
-else
+# Notif ketiga - 3 detik
+notify-send -t 5000 "Info Sistem" "Linux ini ( Code : Zotero )tidak dapat pembaharuan lagi ke depan."
 
- notify-send "🔔 Info : Besok akan ada update untuk wps eror saat dibuka.."
+sleep 5
 
-fi  
+notify-send -t 5000 "Info Sistem" "Tak perlu upgrade jika WPS tidak ada eror."
+
+sleep 5
+
+# Notif keempat - 3 detik
+notify-send -t 5000 "Info Sistem" "Notifikasi ini akan hilang di akhir bulan januari"
+
+
