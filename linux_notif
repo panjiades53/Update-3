@@ -1,6 +1,6 @@
 # Notif pertama - 5 detik
 
-notify-send -t 10000 "⚠️ Wps Eror ⚠️"
+notify-send -t 10000 "⚠️ Wps Eror ? ⚠️"
 sleep 11
 
 notify-send -t 15000 "🔔 Sistem Update tersedia" "( Code Zyrex ) Perbaikan WPS an error eccurred saat di buka. Dan akan memisahkan Zootero untuk install mandiri nantinya."
