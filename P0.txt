@@ -1,7 +1,9 @@
 15000 
 10000 
 Pesan P0 otomatis by : inisial P
+5000
 
 pertama jeda toast
 kedua fetct
 ketiga peaan
+durasi github
