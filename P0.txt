@@ -1,6 +1,6 @@
 15000 
 10000 
-Pesan P0 otomatis
+Pesan P0 otomatis by : inisial P
 
 pertama jeda toast
 kedua fetct
