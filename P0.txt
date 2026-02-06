@@ -1,5 +1,5 @@
 15000 
-100000 
+3600
 Pesan P0 otomatis by : inisial P
 5000
 
