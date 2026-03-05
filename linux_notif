@@ -21,7 +21,3 @@ notify-send -t 5000 "Info Sistem" "Tak perlu upgrade jika WPS tidak ada eror."
 
 sleep 5
 
-# Notif keempat - 3 detik
-notify-send -t 5000 "Info Sistem" "Notifikasi ini akan hilang di akhir bulan januari"
-
-
