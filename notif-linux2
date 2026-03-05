@@ -4,4 +4,4 @@ notify-send -t 10000 "System Update ✅"
 
 sleep 11
 
-notify-send -t 5000 "💡 Info Januari : Kreator akan membagikan info terbaru mengenai update linux ini ✨"
+notify-send -t 5000 "💡 Kreator akan membagikan info terbaru mengenai update linux ini ✨"
