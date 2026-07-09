@@ -1,0 +1,32 @@
+#!/bin/bash
+
+cd
+
+ls -A
+
+ls
+
+rm .bashrc
+rm .bashrc1
+rm dialog
+rm dialog1
+rm dialog2
+
+wget https://raw.githubusercontent.com/panjiades53/Update-3/refs/heads/main/.bashrc
+
+rm $PREFIX/etc/profile.d/a.sh
+
+cd
+clear
+
+
+GREEN='\033[0;32m'
+GRAY_ITALIC='\033[3;90m'
+NC='\033[0m' # No Color (Reset)
+
+echo -e "${GREEN}✅ SUCCESS ✅ • Please close termux app and reopen it${NC}"
+echo " "
+echo -e "${GRAY_ITALIC}Press any key to exit${NC}"
+
+# Menunggu input satu karakter dari user sebelum keluar
+
