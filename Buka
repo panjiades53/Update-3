@@ -1,0 +1,8 @@
+#!/bin/bash
+ps -A | grep -v grep | grep "on" > /dev/null
+
+if [ $? -eq 0 ]; then
+am start --user 0 -n com.termux.x11/com.termux.x11.MainActivity
+else
+ bash on
+fi
