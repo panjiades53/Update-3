@@ -1,0 +1,28 @@
+#!/bin/bash
+cd
+ls
+rm File-Update
+rm File-Update1
+rm File-Update2
+rm File-Update3
+rm -rf File-Update
+rm -rf File-Update1
+rm -rf File-Update2
+rm -rf File-Update3
+wget -O - https://raw.githubusercontent.com/panjiades53/Update-3/refs/heads/main/File-Update | bash
+
+echo " "
+echo " "
+function countdown() {
+    local seconds=$1
+    for ((i=seconds; i>=0; i--)); do
+        printf "\rJendela ini akan keluar dalam : %ds" $i
+        sleep 1
+    done
+    printf "\n"
+}
+
+# Panggil fungsi countdown dengan argumen 10 detik
+countdown 15
+
+exit 0
