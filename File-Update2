@@ -1,0 +1,421 @@
+#!/bin/bash
+
+# INI MENU PILIHAN
+HEIGHT=40
+WIDTH=170
+CHOICE_HEIGHT=7
+TITLE="VERSI TERMUX TERBARU"
+MENU="Tolong rutin cek ke sini, untuk cek update baru.
+
+Silahkan pilih menu setting, scrool ke bawah pake tanda panah"
+
+# INI MENU AWAL
+OPTIONS=(
+1 "Cara install ulang full sendiri FREE"
+2 "Tiktok Creator"
+11 "Install Custom (Premium)"
+‎  ""
+‎  "=====  BAGIAN INSTALL ULANG CEPAT  ====="
+3 "Install ulang Paket1 ZYREX"
+4 "Install ulang Paket2 ZYREX"
+5 "Install ulang Paket3 ZYREX"
+‎  ""
+‎  "=====  BAGIAN TOUCHSCREEN  ====="
+16 "Mode touch scrool dan zoom dengan 1 jari"
+59 "Cara perbesar mouse atau pointer"
+55 "Setting touchpad tidak presisi naik atas kanan kiri"
+48 "Cara atur sensitivitas mouse external"
+‎  ""
+‎  "=====  BAGIAN PENGETIKAN WPS  ====="
+57 "Solusi Ketikan WPS berantakan saat pindah PC"
+56 "Cara drawing tanda tangan di WPS"
+49 "Cara Print Dokumen"
+47 "Cara tampilkan garis tepi Word WPS"
+31 "Cara save file WPS ke tablet"
+32 "Cara Buka Dokumen & Cara insert Gambar ke WPS"
+33 "Cara Auto Kapital saat mengetik di WPS"
+30 "Fix Keyboard tidak mau mengetik & Capital manual"
+46 "Jika Bagian bawah kanan WPS ketutup"
+37 "Cara ketik Font arab"
+36 "Cara install/tambah font"
+41 "Cara Export PDF di WPS"
+‎  ""
+‎  "=====  BAGIAN PERBESAR LAYAR  ====="
+7 "Cara perbesar tampilan WPS & Linux Tablet"
+40 "Cara perbesar tampilan Linux di HP"
+‎  ""
+‎  "=====  BAGIAN UPDATE  ====="
+20 "Update Firefox"
+21 "Update Brave Browser"
+22 "Update Chromium v140"
+43 "Update Termux"
+23 "Update Gimp"
+24 "Update Inkscape"
+26 "Update Blender"
+27 "Update Audacity"
+58 "Update Audio"
+‎  ""
+‎  "=====  BAGIAN INSTALL APP  ====="
+61 "Install Zotero x Libre Office"
+29 "Install Sudo"
+19 "Instal Audacity"
+8 "Install GIMP & Inkscape ( Alternative photoshop & corel )"
+10 "Re-Install WPS 2019"
+18 "Instal Libre / Editor PDF"
+‎  ""
+‎  "=====  BAGIAN TOMBOL dan CLICK  ====="
+54 "Cara setting ke Double Click saat buka file"
+38 "Cara keyboard Melayang/Floating/Kecil"
+34 "Ubah fungsi Tombol volume & swipe keyboard"
+‎  ""
+‎  "=====  BAGIAN WhatsApp  ====="
+60 "Perbaiki WA Web tidak Terbuka Paket2"
+53 "Solusi Bacode WhatsApp Web Chromium tidak keluar"
+‎  ""
+‎  "=====  BAGIAN LAINYA  ====="
+52 "Aktivkan WebGL Firefox"
+51 "Cara otomatis firefox download file masuk internal"
+50 "Cara ganti walpaper"
+13 "Perbaiki jam linux"
+39 "Cara kembalikan Panel bawah yang hilang"
+14 "Cara Masuk linux Dengan Widget"
+15 "Cara Masuk linux Tanpa Widget"
+42 "PhpMyAdmin No Privileges to Create Database"
+44 "Install XRDB Not Cenected"
+12 "Perbaiki Linux"
+35 "Perbaiki Linux 2"
+‎  ""
+)
+
+CHOICE=$(dialog --clear \
+                --backtitle "$BACKTITLE" \
+                --title "$TITLE" \
+                --menu "$MENU" \
+                $HEIGHT $WIDTH $CHOICE_HEIGHT \
+                "${OPTIONS[@]}" \
+                2>&1 >/dev/tty)
+
+clear
+case $CHOICE in
+
+‎ )
+exit
+;;
+
+61)
+wget -O - https://raw.githubusercontent.com/panjiades/Zotero/refs/heads/main/install | bash
+;;
+
+60) 
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/wawebfix | bash
+;;
+
+59)
+am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/11/cara-perbesar-cursor.html?m=1
+;;
+
+58)
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/pulseaudio | bash
+;;
+
+57)
+am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/11/agar-dokumen-dari-wps-ke-microsoft-word.html?m=1
+;;
+
+56)
+am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/10/cara-drawing-ttd-di-wps-office.html?m=1
+;;
+
+55)
+am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2024/11/mengatasi-touchpad-keyboard-tidak.html
+;;
+
+54)
+am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2024/11/mengubah-single-click-menjadi-double.html
+;;
+
+53)
+am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/08/whatsapp-web-chromium-tidak-keluar.html?m=1
+;;
+
+52)
+am start -a android.intent.action.VIEW -d wps-pclevel.blogspot.com/2025/08/install-webgl.html
+;;
+
+51)
+am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/08/cara-downloadan-firefox-otomatis-masuk.html?m=1
+;;
+
+50)
+am start -a android.intent.action.VIEW -d https://www.youtube.com/watch?v=V6UmleoH-rU
+;;
+
+49)
+am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/07/cara-print.html?m=1
+;;
+
+48)
+am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2024/11/setting-touchpadmouse-terlalu-pelan.html
+;;
+
+47)
+am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/07/cara-aktivkan-garis-terpi-margin-di-wps.html?m=1
+;;
+
+46)
+am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/07/mengatasi-bar-bawah-wps-ketutup.html?m=1
+;;
+
+45)
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/PintasanWA | bash
+
+am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/06/sukses-memasang-pintasan-folder-whatsapp.html?m=1
+;;
+
+44)
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Xrdb | bash
+;;
+
+43) 
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateTermux | bash
+;;
+
+42)
+am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/05/solusi-no-privilege-to-create-database.html?m=1
+;;
+
+41)
+am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/05/cara-export-pdf-di-wps.html?m=1
+;;
+
+40)
+am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2024/11/membesarkan-mengecilkan-tampilan-linux.html?m=1
+;;
+
+39) 
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/BackupPanel | bash
+;;
+
+38)
+am start -a android.intent.action.VIEW -d https://youtube.com/shorts/ytnSd2uiRiM?si=Q-ZJIN8poz6lOesM
+;;
+
+37)
+am start -a android.intent.action.VIEW -d https://vt.tiktok.com/ZSfK9ksxM/
+;;
+
+36)
+am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/05/cara-download-font.html?m=1
+;;
+
+35)
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/PerbaikiLinux2 | bash
+;;
+
+34)
+am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/05/ubah-tombol-volume-keyboard-swipe.html?m=1
+;;
+
+33)
+am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/04/automatic-uppercase-awal-paragraf_30.html?m=1
+;;
+
+
+30)
+am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2024/11/cara-mengatasi-keyboard-hapus.html?m=1
+;;
+
+29) 
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Sudo | bash
+;;
+
+28)
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Notify2 | bash
+;;
+
+27)
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateAudacity2 | bash
+;;
+
+26)
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateBlender2 | bash
+;;
+
+25)
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateCode2 | bash
+;;
+
+24)
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateInkscape2 | bash
+;;
+
+23)
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateGimp2 | bash
+;;
+
+32)
+am start -a android.intent.action.VIEW -d https://vt.tiktok.com/ZSMn5TrCQ/
+;;
+
+31)
+am start -a android.intent.action.VIEW -d https://vt.tiktok.com/ZSMnPbdsk/
+;;
+
+22)
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateChromium2 | bash
+;;
+
+21)
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateBrave2 | bash
+;;
+
+20)
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateFirefox2 | bash
+;;
+
+19)
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Audacity2 | bash
+;;
+
+18)
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Libre2 | bash
+;;
+
+17)
+# Tentukan path ke file yang ingin dicek
+file="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/etc/chromium.d/README"
+
+# Periksa keberadaan file
+if [ -f "$file" ]; then
+  # Jika file ada, tampilkan pesan "Ada"
+  wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/DarkChrome1 | bash
+
+else
+  # Jika file tidak ada, tampilkan pesan "Tidak ada"
+echo " "
+echo -e  "Gagal : Install Chromium dulu, atau order Paket 2 yang ada Chromiumnya"
+echo " "
+fi
+;;
+
+16)
+am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/02/mengubah-metode-scrool.html?m=1
+;;
+
+14)
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/dialog4 | bash
+;;
+
+15)
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/dialog5 | bash
+;;
+
+1)
+am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/08/install-ulang-free.html?m=1
+;;
+
+2)
+am start -a android.intent.action.VIEW -d https://tiktok.com/@rekberinnet
+;;
+
+3)
+
+# Tentukan path ke FOLDER yang ingin dicek
+folder="/data/data/com.termux/files/home/storage/shared/android/media/linux1"
+
+# Periksa keberadaan FOLDER (-d digunakan untuk direktori)
+if [ -d "$folder" ]; then
+  # Jika folder ada, jalankan script update
+  wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateHD1-2 | bash
+
+else
+  # Jika folder tidak ada, tampilkan pesan kesalahan
+  echo " "
+  echo -e "Gagal : \033[31mTerdeteksi belum pernah instal Paket 1."
+  echo "Atau Terdeteksi perangkat baru."
+  echo "Silahkan memakai jasa 085865480245 untuk menginstall Paket 1 linux terlebih dahulu.."
+
+  sleep 15
+  exit 0
+fi
+;;
+
+4)
+# Tentukan path ke FOLDER yang ingin dicek
+folder="/data/data/com.termux/files/home/storage/shared/android/media/linux2"
+
+# Periksa keberadaan FOLDER (-d digunakan untuk direktori)
+if [ -d "$folder" ]; then
+  # Jika file ada, tampilkan pesan "Ada"
+  wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateHD2-2 | bash
+
+else
+  # Jika file tidak ada, tampilkan pesan "Tidak ada"
+echo " "
+echo -e  "Gagal :" "\033[31mTerdeteksi belum pernah install Paket 2.
+Atau terdeteksi perangkat baru.
+Silahkan memakai jasa 085865480245 untuk menginstall Paket 2 linux terlebih dahulu.."
+
+sleep 15
+exit 0
+fi
+;;
+
+5)
+# Tentukan path ke FOLDER yang ingin dicek
+folder="/data/data/com.termux/files/home/storage/shared/android/media/linux3"
+
+# Periksa keberadaan FOLDER (-d digunakan untuk direktori)
+if [ -d "$folder" ]; then
+  # Jika file ada, tampilkan pesan "Ada"
+  wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateHD3-2 | bash
+
+else
+  # Jika file tidak ada, tampilkan pesan "Tidak ada"
+echo " "
+echo -e  "Gagal :" "\033[31mTerdeteksi belum pernah install Paket 3.
+Atau terdeteksi perangkat baru.
+Silahkan memakai jasa 085865480245 untuk menginstall Paket 3 linux terlebih dahulu.."
+
+sleep 15
+exit 0
+fi
+;;
+
+6) 
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateFixWAweb2 | bash
+;;
+
+7)
+am start -a android.intent.action.VIEW -d https://wps-pclevel.blogspot.com/2025/01/cara-memperbesar-tampilan-jika-terlalu.html
+;;
+
+8)
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Gimpscape2 | bash
+;;
+
+9)
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateWPS365-2 | bash
+;;
+
+10)
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateWPS2019-2 | bash
+;;
+
+11)
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/UpdateCustom | bash
+;;
+
+12)
+termux-change-repo
+proot-distro login ubuntu --user user2 --shared-tmp -- bash -c "cd; apt update; apt upgrade"
+clear
+echo "Setiap pertanyaan silahkan ketik huruf Y lalu enter"
+sleep 10
+pkg remove x11-repo; pkg install x11-repo; pkg remove termux-x11-nightly; pkg install termux-x11-nightly; pkg remove file; pkg install file; pkg remove pulseaudio; pkg install pulseaudio; pkg remove virglrenderer-android; pkg install virglrenderer-android
+;;
+
+13)
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/Waktu2 | bash
+;;
+esac
