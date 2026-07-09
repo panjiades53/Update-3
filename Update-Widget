@@ -1,0 +1,59 @@
+#!/bin/bash                              
+
+ls
+rm .bashrc
+cd .shortcuts
+ls
+rm Mulai.sh
+rm Matikan.sh
+rm Buka
+rm Buka.1
+rm Buka.2
+rm Tutup
+rm Tutup.1
+rm Tutup.2
+rm Buka_Update
+rm Buka_Update.1
+rm Buka_Update.2
+wget https://raw.githubusercontent.com/panjiades53/Update-3/refs/heads/main/Buka
+wget https://raw.githubusercontent.com/panjiades53/Update-3/refs/heads/main/Tutup
+wget https://raw.githubusercontent.com/panjiades53/Update-3/refs/heads/main/Buka_Update
+chmod +x Buka
+chmod +x Tutup
+chmod +x Buka_Update
+cd
+
+cd /data/data/com.termux/files/usr/bin/
+ls
+rm off
+rm on
+wget https://raw.githubusercontent.com/panjiades53/Update-3/refs/heads/main/on
+wget https://raw.githubusercontent.com/panjiades53/Update-3/refs/heads/main/off
+chmod +x on
+chmod +x off
+
+cd
+
+# Update bashrc
+
+# Definisikan path folder yang akan diperiksa
+FOLDER_PATH="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/home/user2/.Update1"
+
+# Periksa apakah folder ada (-d checks if it is a directory)
+if [ -d "$FOLDER_PATH" ]; then
+    # Jika folder ada
+    echo " "
+else
+    # Jika folder tidak ada
+
+mkdir -pv /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/home/user2/.Update1
+
+wget -O - https://raw.githubusercontent.com/panjiades/Update-3/refs/heads/main/dialog3 | bash
+
+
+clear
+fi
+
+clear
+echo -e "\033[0;32mBERHASIL DIPERBAHARUI"
+echo -e "\033[1;33mSilahkan ketuk tombol kecil reload, di termux widget di beranda android kamu."
