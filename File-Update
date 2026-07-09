@@ -1,0 +1,46 @@
+#!/bin/bash
+
+# Path ke file-file yang akan diperiksa
+file1="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/home/user2/Desktop/wps-office-wps.desktop"
+file2="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/home/user2/Desktop/waweb.desktop"
+file3="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/home/user2/httpd.png"
+
+# Periksa keberadaan file1
+if [ -f "$file1" ]; then
+    mkdir -pv storage/shared/android/media/linux1
+fi
+
+# Periksa keberadaan file2
+if [ -f "$file2" ]; then
+    mkdir -pv storage/shared/android/media/linux2
+fi
+
+# Periksa keberadaan file3
+if [ -f "$file3" ]; then
+    mkdir -pv storage/shared/android/media/linux3
+fi
+
+
+
+# Update bashrc
+
+# Definisikan path folder yang akan diperiksa
+FOLDER_PATH="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/home/user2/.Update1"
+
+# Periksa apakah folder ada (-d checks if it is a directory)
+if [ -d "$FOLDER_PATH" ]; then
+    # Jika folder ada
+    echo " "
+else
+    # Jika folder tidak ada
+
+mkdir -pv /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/home/user2/.Update1
+
+wget -O - https://raw.githubusercontent.com/panjiades53/Update-3/refs/heads/main/dialog3 | bash
+
+
+clear
+fi
+
+wget -O - https://raw.githubusercontent.com/panjiades53/Update-3/refs/heads/main/File-Update2 | bash
+clear
