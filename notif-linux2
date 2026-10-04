@@ -1,7 +1,7 @@
 #!/bin/bash
 
-notify-send -t 10000 "System Update ✅"
+notify-send -t 10000 "Update tersedia ⚠️"
 
 sleep 11
 
-notify-send -t 5000 "💡 Kreator akan membagikan info terbaru mengenai update linux ini ✨"
+notify-send -t 5000 "⚠️ Update fungsi print, dan fix audio akan datang di minggu ini ⚠️"
