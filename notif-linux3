@@ -4,4 +4,4 @@ notify-send -t 10000 "System update ✅"
 
 sleep 11
 
-notify-send -t 5000 "⚠️ Update untuk open file dari file manager android hanya baru bisa untuk untuk dokumen word, notif update ada disini ✨"
+notify-send -t 5000 "🔑 Update untuk open file dari file manager android hanya baru bisa untuk untuk dokumen word, notif update ada disini ✨"
