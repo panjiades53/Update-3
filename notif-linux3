@@ -31,16 +31,16 @@ fi
 # Cek Update 2 (Visual)
 FILE2="$DIR_UPDATE/Update4.txt"
 if [ ! -f "$FILE2" ]; then
-    notify-send -t "$NOTIF_TIME_WARNING" "⚠️ Update ditemukan" "Ada update 1 untuk visual"
+    notify-send -t "$NOTIF_TIME_WARNING" "⚠️ Update 1 ditemukan" "Perbaikan shutdown dan masuk lagi tidak bisa"
     sleep "$JEDA_NOTIF"
     notify-send -t "$NOTIF_TIME_WARNING" "ℹ️ Petunjuk Update" "$PESAN_DEFAULT_2"
     ADA_YANG_KOSONG=1
 fi
 
 # --- CONTOH KALAU NANTI MAU NGECEK LAGI (tinggal uncomment/tambah sendiri) ---
-# FILE3="$DIR_UPDATE/Update3.txt"
+# FILE3="$DIR_UPDATE/Update5.txt"
 # if [ ! -f "$FILE3" ]; then
-#     notify-send -t "$NOTIF_TIME_WARNING" "⚠️ Update ditemukan" "Ada update untuk fitur lain"
+#     notify-send -t "$NOTIF_TIME_WARNING" "⚠️ Update 2 ditemukan" "Kini bisa open file langsung dari android menggunakan termux"
 #     sleep "$JEDA_NOTIF"
 #     notify-send -t "$NOTIF_TIME_WARNING" "ℹ️ Petunjuk Update" "$PESAN_DEFAULT_2"
 #     ADA_YANG_KOSONG=1
