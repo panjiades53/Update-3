@@ -1,7 +1,56 @@
 #!/bin/bash
 
-notify-send -t 10000 "System update ✅"
+# ==========================================
+# PARAMETER DEFAULT (Gampang diatur di sini)
+# ==========================================
+DIR_UPDATE="/home/user2/Update"
+NOTIF_TIME_WARNING=10000  # Durasi notif peringatan (ms)
+NOTIF_TIME_SUCCESS=5000   # Durasi notif sukses (ms)
+JEDA_NOTIF=2              # Jeda waktu dalam detik antar notifikasi
 
-sleep 11
+# Parameter default teks petunjuk/pesan tambahan
+PESAN_DEFAULT_2="Silahkan buka Termux dan pilih buku update no.2"
 
-notify-send -t 5000 "🔑 Update untuk open file dari file manager android hanya baru bisa untuk untuk dokumen word, notif update ada disini ✨"
+# Status penanda apakah ada update yang hilang/belum ada
+ADA_YANG_KOSONG=0
+
+# ==========================================
+# PENGECEKAN FILE SATU PERSATU
+# (Kamu bisa tambah ke bawah dengan pola sama)
+# ==========================================
+
+# Cek Update 1 (Sound)
+FILE1="$DIR_UPDATE/Update4.txt"
+if [ ! -f "$FILE1" ]; then
+    notify-send -t "$NOTIF_TIME_WARNING" "⚠️ Update ditemukan" "Ada update 1 untuk sound"
+    sleep "$JEDA_NOTIF"
+    notify-send -t "$NOTIF_TIME_WARNING" "ℹ️ Petunjuk Update" "$PESAN_DEFAULT_2"
+    ADA_YANG_KOSONG=1
+fi
+
+# Cek Update 2 (Visual)
+FILE2="$DIR_UPDATE/Update4.txt"
+if [ ! -f "$FILE2" ]; then
+    notify-send -t "$NOTIF_TIME_WARNING" "⚠️ Update ditemukan" "Ada update 1 untuk visual"
+    sleep "$JEDA_NOTIF"
+    notify-send -t "$NOTIF_TIME_WARNING" "ℹ️ Petunjuk Update" "$PESAN_DEFAULT_2"
+    ADA_YANG_KOSONG=1
+fi
+
+# --- CONTOH KALAU NANTI MAU NGECEK LAGI (tinggal uncomment/tambah sendiri) ---
+# FILE3="$DIR_UPDATE/Update3.txt"
+# if [ ! -f "$FILE3" ]; then
+#     notify-send -t "$NOTIF_TIME_WARNING" "⚠️ Update ditemukan" "Ada update untuk fitur lain"
+#     sleep "$JEDA_NOTIF"
+#     notify-send -t "$NOTIF_TIME_WARNING" "ℹ️ Petunjuk Update" "$PESAN_DEFAULT_2"
+#     ADA_YANG_KOSONG=1
+# fi
+# --------------------------------------------------------------------------
+
+# ==========================================
+# KONDISI AKHIR
+# ==========================================
+# Jika semua file di atas ternyata ADA (tidak ada yang kosong), munculkan sukses
+if [ "$ADA_YANG_KOSONG" -eq 0 ]; then
+    notify-send -t "$NOTIF_TIME_SUCCESS" "System Update ✅"
+fi
