@@ -4,4 +4,4 @@ notify-send -t 10000 "Update akan tersedia ⚠️"
 
 sleep 11
 
-notify-send -t 5000 "⚠️ Update fungsi print, dan fix audio akan datang di minggu ini ⚠️"
+notify-send -t 5000 "⚠️ Update fungsi print, dan fix audio akan datang di minggu ini ⚠️⚠️"
