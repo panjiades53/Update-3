@@ -4,7 +4,7 @@ notify-send -t 7000 "Update akan tersedia ⚠️"
 
 sleep 3
 
-notify-send -t 7000 "⚠️ Update fungsi print, open file langsung dan fix audio akan datang di minggu ini ⚠️"
+notify-send -t 7000 "⚠️ Update fungsi print, open file langsung, fix audio, dan penambahan aplikasi office baru yang akan datang di minggu ini ⚠️"
 
 sleep 3
 
