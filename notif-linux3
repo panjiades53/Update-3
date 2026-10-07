@@ -22,7 +22,7 @@ ADA_YANG_KOSONG=0
 # Cek Update 1 (Sound)
 FILE1="$DIR_UPDATE/Update4.txt"
 if [ ! -f "$FILE1" ]; then
-    notify-send -t "$NOTIF_TIME_WARNING" "⚠️ Update ditemukan" "Ada update 1 untuk sound"
+    notify-send -t "$NOTIF_TIME_WARNING" "⚠️ Update ditemukan" "Ada update 1 untuk open file"
     sleep "$JEDA_NOTIF"
     notify-send -t "$NOTIF_TIME_WARNING" "ℹ️ Petunjuk Update" "$PESAN_DEFAULT_2"
     ADA_YANG_KOSONG=1
@@ -31,7 +31,7 @@ fi
 # Cek Update 2 (Visual)
 FILE2="$DIR_UPDATE/Update4.txt"
 if [ ! -f "$FILE2" ]; then
-    notify-send -t "$NOTIF_TIME_WARNING" "⚠️ Update 1 ditemukan" "Perbaikan shutdown dan masuk lagi tidak bisa"
+    notify-send -t "$NOTIF_TIME_WARNING" "⚠️ Update 1 ditemukan" "Perbaikan fungsi shutdown dan masuk lagi tidak bisa"
     sleep "$JEDA_NOTIF"
     notify-send -t "$NOTIF_TIME_WARNING" "ℹ️ Petunjuk Update" "$PESAN_DEFAULT_2"
     ADA_YANG_KOSONG=1
