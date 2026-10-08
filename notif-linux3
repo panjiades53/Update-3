@@ -4,8 +4,8 @@
 # PARAMETER DEFAULT (Gampang diatur di sini)
 # ==========================================
 DIR_UPDATE="/home/user2/Update"
-NOTIF_TIME_WARNING=15000  # Durasi notif peringatan (ms)
-NOTIF_TIME_SUCCESS=10000   # Durasi notif sukses (ms)
+NOTIF_TIME_WARNING=20000  # Durasi notif peringatan (ms)
+NOTIF_TIME_SUCCESS=15000   # Durasi notif sukses (ms)
 JEDA_NOTIF=2              # Jeda waktu dalam detik antar notifikasi
 
 # Parameter default teks petunjuk/pesan tambahan
