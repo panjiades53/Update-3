@@ -20,9 +20,9 @@ ADA_YANG_KOSONG=0
 # ==========================================
 
 # Cek Update 1 (Sound)
-FILE1="$DIR_UPDATE/Update4.txt"
+FILE1="$DIR_UPDATE/Update6.txt"
 if [ ! -f "$FILE1" ]; then
-    notify-send -t "$NOTIF_TIME_WARNING" "⚠️ Update ditemukan" "Ada update 1 untuk open file"
+    notify-send -t "$NOTIF_TIME_WARNING" "⚠️ Update ditemukan" "Ada update 1 untuk open file dan perbaikan shutdown"
     sleep "$JEDA_NOTIF"
     notify-send -t "$NOTIF_TIME_WARNING" "ℹ️ Petunjuk Update" "$PESAN_DEFAULT_2"
     ADA_YANG_KOSONG=1
