@@ -4,12 +4,12 @@
 # PARAMETER DEFAULT (Gampang diatur di sini)
 # ==========================================
 DIR_UPDATE="/home/user2/Update"
-NOTIF_TIME_WARNING=10000  # Durasi notif peringatan (ms)
-NOTIF_TIME_SUCCESS=5000   # Durasi notif sukses (ms)
+NOTIF_TIME_WARNING=15000  # Durasi notif peringatan (ms)
+NOTIF_TIME_SUCCESS=10000   # Durasi notif sukses (ms)
 JEDA_NOTIF=2              # Jeda waktu dalam detik antar notifikasi
 
 # Parameter default teks petunjuk/pesan tambahan
-PESAN_DEFAULT_2="Silahkan buka Termux dan pilih buku update no.2"
+PESAN_DEFAULT_2="Silahkan buka apk Termux di android dan pilih buku update no.2"
 
 # Status penanda apakah ada update yang hilang/belum ada
 ADA_YANG_KOSONG=0
@@ -22,7 +22,7 @@ ADA_YANG_KOSONG=0
 # Cek Update 1 (Sound)
 FILE1="$DIR_UPDATE/Update6.txt"
 if [ ! -f "$FILE1" ]; then
-    notify-send -t "$NOTIF_TIME_WARNING" "⚠️ Update ditemukan" "Ada update 1 untuk open file dan perbaikan shutdown"
+    notify-send -t "$NOTIF_TIME_WARNING" "⚠️ Update ditemukan!" "Ada update untuk open file dari android dan perbaikan shutdown"
     sleep "$JEDA_NOTIF"
     notify-send -t "$NOTIF_TIME_WARNING" "ℹ️ Petunjuk Update" "$PESAN_DEFAULT_2"
     ADA_YANG_KOSONG=1
