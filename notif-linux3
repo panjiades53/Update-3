@@ -29,7 +29,7 @@ if [ ! -f "$FILE1" ]; then
 fi
 
 # Cek Update 2 (Visual)
-FILE2="$DIR_UPDATE/Update4.txt"
+FILE2="$DIR_UPDATE/Update1.txt"
 if [ ! -f "$FILE2" ]; then
     notify-send -t "$NOTIF_TIME_WARNING" "⚠️ Update 1 ditemukan" "Perbaikan fungsi shutdown dan masuk lagi tidak bisa"
     sleep "$JEDA_NOTIF"
