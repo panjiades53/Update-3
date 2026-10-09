@@ -20,9 +20,9 @@ ADA_YANG_KOSONG=0
 # ==========================================
 
 # Cek Update 1 (Sound)
-FILE1="$DIR_UPDATE/Update6.txt"
+FILE1="$DIR_UPDATE/Update7.txt"
 if [ ! -f "$FILE1" ]; then
-    notify-send -t "$NOTIF_TIME_WARNING" "⚠️ UPDATE DIPERLUKAN !" "Ada update untuk open file dari android dan perbaikan shutdown.\nSetelah open file dalam kondisi shutdown,\nakan memnyempurnakan fungsi shutdown agar\ntidak bolak balik."
+    notify-send -t "$NOTIF_TIME_WARNING" "⚠️ UPDATE DIPERLUKAN !" "Penyempurnaan open file dari file manager android.\nSerta perbaikan setelah open file dalam kondisi shutdown."
     sleep "$JEDA_NOTIF"
     notify-send -t "$NOTIF_TIME_WARNING" "ℹ️ Petunjuk Update" "$PESAN_DEFAULT_2"
     ADA_YANG_KOSONG=1
