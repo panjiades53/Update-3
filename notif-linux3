@@ -38,7 +38,7 @@ if [ ! -f "$FILE2" ]; then
 fi
 
 # --- CONTOH KALAU NANTI MAU NGECEK LAGI (tinggal uncomment/tambah sendiri) ---
-# FILE3="$DIR_UPDATE/Update5.txt"
+# FILE3="$DIR_UPDATE/Update1.txt"
 # if [ ! -f "$FILE3" ]; then
 #     notify-send -t "$NOTIF_TIME_WARNING" "⚠️ Update 2 ditemukan" "Kini bisa open file langsung dari android menggunakan termux"
 #     sleep "$JEDA_NOTIF"
