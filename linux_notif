@@ -1,23 +1,15 @@
-# Notif pertama - 5 detik
-
-notify-send -t 10000 "⚠️ Wps Eror ? ⚠️"
-sleep 11
-
-notify-send -t 15000 "🔔 Sistem Update tersedia" "( Code Zyrex ) Perbaikan WPS an error eccurred saat di buka. Dan akan memisahkan Zootero untuk install mandiri nantinya."
-
-sleep 8
-
-# Notif kedua - 10 detik
-notify-send -t 12000 "⚠️ CARA UPDATE LINUX ( Code Zyrex )" "1. Buka termux biasa\n2. Pilih 2 Buku Update\n3. Pilih install Ulang paket ( code zyrex )\n4. Download bahan sesuai paket awal\n5. Buka termux lagi bagian install ulang code zyrex\n6. Install ✅"
-
-sleep 12
-
-# Notif ketiga - 3 detik
-notify-send -t 5000 "Info Sistem" "Linux ini ( Code : Zotero ) tidak dapat pembaharuan lagi ke depan."
-
-sleep 5
-
-notify-send -t 5000 "Info Sistem" "Tak perlu upgrade jika WPS tidak ada eror."
-
-sleep 5
-
+notify-send -u normal -t 100000 "⚠️  Update Tersedia ⚠️"
+sleep 2
+notify-send -u normal -t 100000 "Termux V4" "Fitur :
+• Perbaikan bug audio ✓
+• Scrool 1 jari ✓
+• Klik kanan 1 jari ✓
+• Fungsi print dari WPS ✓
+• Tap 2 jari untuk open keyboard ✓
+• Support stylus ✓
+• Google chrome bisa login account ✓
+• Office baru (only office) ✓
+• Zootero x Libre office ✓
+• Bisa open file dari mode android ke termux ✓"
+sleep 2
+notify-send -u normal -t 100000 "Cara Update :" "• Cek di apk termux\nLalu pilih buku update nomor 2, ikuti panduan update.\n• Atau di Buka_Update di widget, ikuti panduan update."
