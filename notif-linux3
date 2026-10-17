@@ -5,11 +5,23 @@
 # ==========================================
 DIR_UPDATE="/home/user2/Update"
 NOTIF_TIME_WARNING=20000  # Durasi notif peringatan (ms)
-NOTIF_TIME_SUCCESS=15000   # Durasi notif sukses (ms)
+NOTIF_TIME_SUCCESS=15000  # Durasi notif sukses (ms)
 JEDA_NOTIF=2              # Jeda waktu dalam detik antar notifikasi
 
 # Parameter default teks petunjuk/pesan tambahan
 PESAN_DEFAULT_2="Silahkan buka apk Termux di android dan pilih buku update no.2"
+
+# ==========================================
+# PARAMETER 7 TIPS HARIAN (Senin - Minggu)
+# Silahkan ubah isi teks sesuai keinginanmu
+# ==========================================
+TIPS_SENIN="Setting pengaturan ada di apk termux"
+TIPS_SELASA="Gunakan fitur klik kanan 1 jari untuk kemudahan navigasi"
+TIPS_RABU="Kamu bisa buka file dokumen langsung dari File Manager Android"
+TIPS_KAMIS="Jika audio tidak keluar, pastikan update terbaru sudah terpasang"
+TIPS_JUMAT="Jangan lupa simpan pekerjaanmu sebelum melakukan shutdown"
+TIPS_SABTU="Gunakan fitur print langsung dari menu aplikasi"
+TIPS_MINGGU="Cek menu buku update di apk Termux secara berkala untuk fitur baru"
 
 # Status penanda apakah ada update yang hilang/belum ada
 ADA_YANG_KOSONG=0
@@ -50,7 +62,25 @@ fi
 # ==========================================
 # KONDISI AKHIR
 # ==========================================
-# Jika semua file di atas ternyata ADA (tidak ada yang kosong), munculkan sukses
+# Jika semua file di atas ternyata ADA (tidak ada yang kosong), munculkan sukses + Tips Harian
 if [ "$ADA_YANG_KOSONG" -eq 0 ]; then
     notify-send -t "$NOTIF_TIME_SUCCESS" "System Update ✅"
+    
+    sleep 3
+
+    # Ambil angka hari (1 = Senin, 2 = Selasa, ..., 7 = Minggu)
+    HARI_KE=$(date +%u)
+
+    case "$HARI_KE" in
+        1) PESAN_TIPS="$TIPS_SENIN" ;;
+        2) PESAN_TIPS="$TIPS_SELASA" ;;
+        3) PESAN_TIPS="$TIPS_RABU" ;;
+        4) PESAN_TIPS="$TIPS_KAMIS" ;;
+        5) PESAN_TIPS="$TIPS_JUMAT" ;;
+        6) PESAN_TIPS="$TIPS_SABTU" ;;
+        7) PESAN_TIPS="$TIPS_MINGGU" ;;
+    esac
+
+    # Munculkan notifikasi tips sesuai hari
+    notify-send -t "$NOTIF_TIME_SUCCESS" "💡 Tips :" "$PESAN_TIPS"
 fi
