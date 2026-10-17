@@ -16,12 +16,12 @@ PESAN_DEFAULT_2="Silahkan buka apk Termux di android dan pilih buku update no.2"
 # Silahkan ubah isi teks sesuai keinginanmu
 # ==========================================
 TIPS_SENIN="Setting pengaturan ada di apk termux\nlalu pilih no4 Pengaturan"
-TIPS_SELASA="Gunakan fitur klik kanan 1 jari untuk kemudahan navigasi"
-TIPS_RABU="Kamu bisa buka file dokumen langsung dari File Manager Android"
+TIPS_SELASA="Gunakan fitur klik kanan 1 jari tahan untuk kemudahan navigasi"
+TIPS_RABU="Kamu bisa buka file dokumen langsung dari File Manager Android\nMasih experimental untuk wps yaa"
 TIPS_KAMIS="Jika audio tidak keluar, pastikan update terbaru sudah terpasang"
-TIPS_JUMAT="Jangan lupa simpan pekerjaanmu sebelum melakukan shutdown"
-TIPS_SABTU="Gunakan fitur print langsung dari menu aplikasi"
-TIPS_MINGGU="Cek menu buku update di apk Termux secara berkala untuk fitur baru"
+TIPS_JUMAT="Jangan lupa save file ke Desktop > Internal\nagar masuk penyimpanan android"
+TIPS_SABTU="Gunakan fitur print langsung, sementara dari aplikasi WPS"
+TIPS_MINGGU="Cek menu buku update di apk Termux, kadang ada aplikasi baru !"
 
 # Status penanda apakah ada update yang hilang/belum ada
 ADA_YANG_KOSONG=0
